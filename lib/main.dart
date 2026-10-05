@@ -150,7 +150,49 @@ class TelaDashboard extends StatelessWidget {
                     ),
                   ),
                 ),
+                // Exercicio 05: segundo selo no canto inferior esquerdo
+                Positioned(
+                  bottom: -8,
+                  left: -8,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Text(
+                      'Confirmado',
+                      style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
               ],
+            ),
+            const SizedBox(height: 24.0),
+ 
+            // Exercicio 03: secao Ultimos Registros
+            const Text(
+              'Ultimos Registros',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 16.0),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              decoration: BoxDecoration(
+                color: Colors.teal.shade50,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Icon(Icons.list, color: Colors.teal),
+                  const Text('Sabia-Laranjeira - hoje'),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text('Ver todos'),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
